@@ -1,0 +1,19 @@
+Line	Loc	Source statement		Object code
+5	0	COPY    START 0		
+10	0		var1	RESW	1		
+15	3		var2	RESB	12		
+20	C		var3  EQU  12		
+25	F	add var1		1B2FEE
+30	12	+addf var2		5B100003
+35	16	addr a,b		9003
+40	18	+and var1		43100000
+45	1C	clear b		B430
+50	1E	comp 0		2B0000
+55	21	+compf var3		8B10000C
+60	25	compr b,a		A030
+65	27	.this is comment		
+70	27	div var1		272FD6
+75	2A	divf var1		672FD3
+80	2D	divr l,s		9C24
+85	2F	fix		C4
+90	30	float		C0

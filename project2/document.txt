@@ -1,0 +1,26 @@
+開發平台 : 
+處理器:Intel(R) Core(TM) i7-7700HQ CPU@ 2.80GHz
+RAM: 8.00 GB
+系統類型: 64位元
+
+使用開發環境 : 
+	Windows版本: Windows 10 家用版
+	IDE: DevC++
+	Compiler: GNU GCC
+	
+使用的程式語言 : 
+	C++
+
+所選擇的組合語言(x86 , SIC ) : 
+	SIC
+
+說明你的程式設計(功能，流程，使用的data structure):
+	功能:讀檔、寫檔、使用者輸入、螢幕輸出。
+流程:
+	每次讀一個字元就判斷是否讀到white space，或是符號，如果讀到white space就表示有一個token，如果獨到符號表示有1個或2個token，此時將token做適當分割並查表，若此token在表內沒有出現，表示此token應該為symbol或integer或string，因此需要自行hash到table5、6、7內，在進行查表，並輸出。
+	token切完後就是將token包裝成token Groups，再萃取出主要的symbol、opcode、oprands(依逗號分開)，萃取後開始跑pass1，將location計算出來，並建立一個symbol記錄此symbol在何處被定義，記錄完後就可以開始跑pass2，翻譯所有的statement成objectcode，並依照Line、Location、source statement、object順序輸出到檔案中。
+使用的data structure:
+	二維的string陣列(用以儲存table)、hash table、vector、struct。
+
+未完成的功能:
+	Lexical Analysis、Syntax Analysis、翻objectcode的功能皆有完成。
